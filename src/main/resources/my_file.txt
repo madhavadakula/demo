@@ -42,3 +42,55 @@ This allows for greater flexibility in how the sum is used.  The printing could 
 
 
 * The method name `add` is fairly generic.  A more descriptive name might be preferable depending on the context, such as `sumIntegers` or `calculateSum`.
+## Method Documentation: `add(int a, int b)`
+
+**Description:**
+
+This method calculates the sum of two integer values and prints the result to the console.
+
+**Parameters:**
+
+* `a`: An integer representing the first addend.
+* `b`: An integer representing the second addend.
+
+**Return Value:**
+
+This method does not return a value (`void`).  The sum of `a` and `b` is printed to the console using `System.out.println()`.
+
+**Example Usage:**
+
+```java
+int x = 5;
+int y = 10;
+add(x, y); // Output: 15
+
+add(25, -5); // Output: 20
+```
+
+**Exceptions:**
+
+This method does not throw any checked exceptions.  However, if the sum of `a` and `b` results in an integer overflow, the result will be incorrect due to the limitations of the `int` data type.
+
+
+**Notes:**
+
+* The method performs a simple addition operation.  For more complex arithmetic operations or handling of larger numbers, consider using different data types (e.g., `long`, `BigInteger`) or alternative methods.
+* The output is printed directly to the console.  For more flexible handling of the result, consider returning the sum instead of printing it.  This would allow the calling method to use the sum for further calculations or processing.  A revised version returning the sum is shown below.
+
+
+**Revised Version (Returning the Sum):**
+
+```java
+/**
+ * Calculates the sum of two integers.
+ * @param a The first addend.
+ * @param b The second addend.
+ * @return The sum of a and b.
+ */
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+
+This revised version is generally preferred because it allows for greater flexibility and reusability. The caller can then decide how to handle the sum (print it, store it, use it in further calculations, etc.).
