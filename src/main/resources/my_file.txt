@@ -1,2 +1,44 @@
 This text will be appended to the file.
 India's Independence Day is celebrated on **August 15th**.
+## Method Documentation: `add(int a, int b)`
+
+**Description:**
+
+This method calculates the sum of two integer inputs and prints the result to the console.
+
+**Parameters:**
+
+* `a`: An integer representing the first addend.
+* `b`: An integer representing the second addend.
+
+**Return Value:**
+
+This method does not return a value (void).  The sum of the two input integers is printed to the console using `System.out.println()`.
+
+**Example Usage:**
+
+```java
+int x = 5;
+int y = 10;
+add(x, y); // Output: 15
+```
+
+**Exceptions:**
+
+This method does not throw any exceptions.
+
+
+**Notes:**
+
+* The method directly prints the sum to the console.  If you need to use the sum elsewhere in your program, it would be more appropriate to return the sum as an integer rather than printing it. A better design might be:
+
+```java
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+This allows for greater flexibility in how the sum is used.  The printing could then be handled separately if needed.
+
+
+* The method name `add` is fairly generic.  A more descriptive name might be preferable depending on the context, such as `sumIntegers` or `calculateSum`.
