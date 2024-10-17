@@ -13,6 +13,8 @@ Once you provide the code, tell me what kind of documentation you'd like:
     * Dependencies
 
 
+
+
 The more detail you provide about the desired output, the better I can tailor the documentation to your needs.
 Please provide the Java code you would like me to generate documentation for.  I need the code to create the documentation.  
 
@@ -75,7 +77,7 @@ This document describes the `Math` class within the `com.example.demo` package. 
 
 **Class:** `Math`
 
-**Purpose:** This class demonstrates a basic mathematical operation – addition of two integers.  While it uses the name "Math," it's important to note that it does *not* replace or extend the functionality of Java's built-in `java.lang.Math` class.  This is a simple example and should not be used for production-level mathematical computations.
+**Purpose:** This class demonstrates a basic mathematical operation â€“ addition of two integers.  While it uses the name "Math," it's important to note that it does *not* replace or extend the functionality of Java's built-in `java.lang.Math` class.  This is a simple example and should not be used for production-level mathematical computations.
 
 
 **Method:**
