@@ -1,4 +1,12 @@
 steps:
+steps:
+- name: 'gcr.io/cloudbuild/docker'
+  args: ['build', '-t', 'my-image:latest', '.']
+- name: 'gcr.io/cloudbuild/docker'
+  args: ['push', 'my-image:latest']
+- name: 'gcr.io/cloudbuild/docker'
+  args: ['curl', '-X', 'POST', '
+https://europe-west3-hip-graph-339211.cloudfunctions.net/fs-ps-4-mdv', '-H','--data', '{"name": "Madhav"}']
 - name: maven:3.8.3-openjdk-17
   entrypoint: mvn
   args:
