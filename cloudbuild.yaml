@@ -1,17 +1,6 @@
 
-workflows:
-- name: my-workflow
-    steps:
-      - call_my_function:
-          call: http.post
-          args:
-            url: https://europe-west3-hip-graph-339211.cloudfunctions.net/fs-ps-4-mdv
-            auth:
-              type: OIDC
-            body:
-              message: "Hello from Workflow!"
-          result: the_message
-      - return_value:
-          return: ${the_message.body}
+steps:
+- name: python
+  args: ['/bin/bash', '-c', 'gcloud alpha functions call fs-ps-4-mdv --region europe-west3 --data="{ \"name\": \"Madhav!\" }"']
 options:
   logging: CLOUD_LOGGING_ONLY
