@@ -10,7 +10,7 @@ Once you provide the code, tell me what kind of documentation you'd like:
     * Usage examples
     * Algorithm explanations
     * Error handlin
-    * Dependencies
+    * Dependencie
 
 
 
