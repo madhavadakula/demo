@@ -3,7 +3,7 @@ name: Invoke Cloud Function
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   invoke-function:
