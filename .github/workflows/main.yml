@@ -12,13 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Google Cloud SDK
-        uses: google-github-actions/auth@v0
-        with:
-          credentials_json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-
-      - name: Invoke Cloud Function
+      - name: Trigger Cloud Function
         run: |
-          gcloud functions call fs-ps-4-mdv \
-            --region europe-west3 \
-            --data '{"name": "Hello from GitHub Actions!"}'
+          curl -X POST https://your-cloud-function-endpoint \
+          -H "Authorization: Bearer YOUR_API_KEY" \
+          -d '{"message": "Triggered from GitHub Actions"}'
